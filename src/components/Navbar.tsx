@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Smartphone, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -6,8 +6,10 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [isMobileSubMenuOpen, setIsMobileSubMenuOpen] = useState(false); // 💡 New state for mobile submenu
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const location = useLocation(); // React Router hook for active route
+  const location = useLocation();
   const activePath = location.pathname;
 
   useEffect(() => {
@@ -18,16 +20,34 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsSubMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Closes mobile menu and its submenu
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+    setIsMobileSubMenuOpen(false);
+  };
+
   const navigation = [
     { name: 'Home', href: '/' },
     {
       name: 'About',
       submenu: [
         { name: 'Overview', href: '/overview' },
-        { name: 'Our Vision', href: '/our-vision' }, // you can add route later
+        { name: 'Our Vision', href: '/our-vision' },
       ],
     },
-    { name: 'Features', href: '/features' }, // create route later if needed
+    { name: 'Features', href: '/features' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
@@ -62,7 +82,7 @@ const Navbar: React.FC = () => {
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.submenu ? (
-                  <>
+                  <div ref={dropdownRef} className="relative">
                     <button
                       onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
                       className={`text-sm font-medium transition-colors hover:text-primary-500 flex items-center ${
@@ -98,7 +118,7 @@ const Navbar: React.FC = () => {
                         ))}
                       </div>
                     )}
-                  </>
+                  </div>
                 ) : (
                   <Link
                     to={item.href}
@@ -127,7 +147,10 @@ const Navbar: React.FC = () => {
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+                setIsMobileSubMenuOpen(false); // 💡 Reset mobile submenu state when main menu is toggled
+              }}
               className={`p-2 rounded-md transition-colors ${
                 isScrolled
                   ? 'text-gray-700 hover:bg-gray-100'
@@ -153,7 +176,7 @@ const Navbar: React.FC = () => {
                 {item.submenu ? (
                   <>
                     <button
-                      onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                      onClick={() => setIsMobileSubMenuOpen(!isMobileSubMenuOpen)} // 💡 Use separate state
                       className={`w-full text-left block text-gray-700 hover:text-primary-500 font-medium transition-colors flex items-center justify-between ${
                         isAboutActive ? 'text-primary-500 font-bold' : ''
                       }`}
@@ -161,11 +184,11 @@ const Navbar: React.FC = () => {
                       {item.name}
                       <ChevronDown
                         className={`h-4 w-4 transition-transform ${
-                          isSubMenuOpen ? 'rotate-180' : ''
+                          isMobileSubMenuOpen ? 'rotate-180' : '' // 💡 Use separate state
                         }`}
                       />
                     </button>
-                    {isSubMenuOpen && (
+                    {isMobileSubMenuOpen && ( // 💡 Use separate state
                       <div className="pl-4 mt-2 space-y-2">
                         {item.submenu.map((subItem) => (
                           <Link
@@ -176,10 +199,7 @@ const Navbar: React.FC = () => {
                                 ? 'text-primary-500 font-bold'
                                 : ''
                             }`}
-                            onClick={() => {
-                              setIsMenuOpen(false);
-                              setIsSubMenuOpen(false);
-                            }}
+                            onClick={closeMobileMenu} // 💡 Use a single function to close both menus
                           >
                             {subItem.name}
                           </Link>
@@ -193,7 +213,7 @@ const Navbar: React.FC = () => {
                     className={`block text-gray-700 hover:text-primary-500 font-medium transition-colors ${
                       activePath === item.href ? 'text-primary-500 font-bold' : ''
                     }`}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={closeMobileMenu} // 💡 Use a single function to close the menu
                   >
                     {item.name}
                   </Link>

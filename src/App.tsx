@@ -11,6 +11,8 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import Contact from './contact';
 import Overview from './components/overview';
+import FAQ from './components/FAQ';
+import ScrollToTop from "./components/ScrollToTop";
 
 function Home() {
   return (
@@ -21,7 +23,6 @@ function Home() {
       <ImageTextSection />
       <BenefitsSection />
       <ClientSlider />
-      <WhatsAppButton />
     </>
   );
 }
@@ -31,13 +32,15 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/overview" element={<Overview />} />
-
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
         <Footer />
+        <WhatsAppButton /> {/* 👈 Now global, shows on every page */}
       </div>
     </Router>
   );

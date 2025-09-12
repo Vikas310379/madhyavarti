@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar'; // adjust path if needed
-import Footer from '../components/Footer'; // adjust path if needed
-import WhatsAppButton from '../components/WhatsAppButton';
+import { ShoppingCart, Handshake, Package, TrendingUp, ShieldCheck, Users } from "lucide-react";
 
 // Hero background styling from Hero.tsx
 const HeroBackground = () => (
@@ -14,28 +13,34 @@ const HeroBackground = () => (
 
 const coreValues = [
   {
-    title: "Customers First",
-    desc: "Putting customers first is our mantra. We prioritise your needs, delivering tailored IT solutions with a smile."
+    title: "Customer First, Always",
+    desc: "Our retailers are at the heart of everything we do. We listen, adapt, and deliver groceries that meet your needs seamlessly.",
+    icon: ShoppingCart
   },
   {
-    title: "Act With Integrity",
-    desc: "Integrity is the heart of our operations. We uphold the highest ethical standards, ensuring trust in every IT endeavour."
+    title: "Trust & Transparency",
+    desc: "We believe in honest pricing, clear processes, and building long-term trust with every partner we serve.",
+    icon: ShieldCheck
   },
   {
-    title: "Make a Difference Every Day",
-    desc: "Every day, we're dedicated to making a positive impact. Our IT solutions drive meaningful change in your business."
+    title: "Impact Every Day",
+    desc: "Every delivery, every order matters. We work to simplify your supply chain and make your business more efficient daily.",
+    icon: Package
   },
   {
-    title: "Think Big",
-    desc: "We embrace bold ideas and foster innovation, thinking big to create IT solutions that propel your business forward."
+    title: "Think Beyond the Basket",
+    desc: "We don’t just deliver groceries — we innovate to provide smarter solutions that help your business grow.",
+    icon: TrendingUp
   },
   {
-    title: "Do the right thing",
-    desc: "Doing right is our commitment. We make ethical choices, always prioritising what's best for our clients and their IT needs."
+    title: "Do the Right Thing",
+    desc: "Fair trade, ethical sourcing, and consistent quality are our non-negotiables — because your business deserves the best.",
+    icon: Handshake
   },
   {
-    title: "Stronger united",
-    desc: "Together, we're stronger. We unite expertise, teamwork, and technology to fortify your IT infrastructure for lasting success."
+    title: "Together We Grow",
+    desc: "Partnership drives progress. By uniting retailers, suppliers, and technology, we build a stronger ecosystem for all.",
+    icon: Users
   }
 ];
 
@@ -68,7 +73,7 @@ function Overview() {
       {/* Core Values Section */}
       <section className="max-w-6xl mx-auto px-4 py-12">
         <div className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-700 mb-2">Core values</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-700 mb-2">Core Values</h2>
           <p className="text-gray-700 mb-6">
             We break down barriers so teams can focus on what matters – working together to create products their customers love.
           </p>
@@ -76,7 +81,7 @@ function Overview() {
             <ul className="space-y-6">
               {coreValues.slice(0, 3).map((value, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <span className="text-blue-600 text-2xl">✓</span>
+                  <value.icon className="text-blue-600 w-6 h-6 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-blue-800">{value.title}</div>
                     <div className="text-gray-600 text-sm">{value.desc}</div>
@@ -87,7 +92,7 @@ function Overview() {
             <ul className="space-y-6">
               {coreValues.slice(3).map((value, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <span className="text-blue-600 text-2xl">✓</span>
+                  <value.icon className="text-blue-600 w-6 h-6 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-blue-800">{value.title}</div>
                     <div className="text-gray-600 text-sm">{value.desc}</div>
@@ -104,7 +109,7 @@ function Overview() {
         <div className="bg-white rounded-xl shadow border flex flex-col md:flex-row overflow-hidden">
           <div className="md:w-1/2">
             <img
-              src="/images/approach.jpg"
+              src="/images/approach.png"
               alt="Our Approach"
               className="w-full h-full object-cover"
             />
@@ -112,7 +117,7 @@ function Overview() {
           <div className="md:w-1/2 p-8 flex flex-col justify-center">
             <h2 className="text-2xl font-bold text-blue-700 mb-4">Our Approach</h2>
             <p className="text-gray-700 mb-6">
-              Our approach is rooted in a client-centric philosophy. We begin by thoroughly understanding your unique business needs and objectives. Then, we tailor comprehensive solutions, harnessing the latest technologies, to empower your success. We believe in transparency, collaboration, and adaptability to ensure your digital journey is exceptional.
+              Our approach is grounded in a deep understanding of the B2B grocery ecosystem. We work closely with retailers, distributors, and suppliers to identify operational challenges and growth opportunities. Leveraging advanced technology, data-driven insights, and a robust logistics network, we deliver scalable solutions that streamline procurement, ensure supply reliability, and enhance efficiency. With a commitment to transparency, collaboration, and innovation, we empower businesses to build stronger supply chains and achieve sustainable growth.
             </p>
             <div className="flex gap-4">
               <a
@@ -131,15 +136,8 @@ function Overview() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <Footer />
-      
-       {/* WhatsAppButton */}
-      <WhatsAppButton />
     </div>
-   );
- 
+  );
 }
 
 export default Overview;
