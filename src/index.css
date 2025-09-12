@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html {
+  font-size: 95%;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ...existing code... */
+
+@keyframes lightMove1 {
+  0%, 100% { transform: translate(-150px, -150px) scale(1); }
+  50% { transform: translate(150px, 150px) scale(1.15); }
+}
+@keyframes lightMove2 {
+  0%, 100% { transform: translate(150px, -100px) scale(1); }
+  50% { transform: translate(-100px, 150px) scale(1.18); }
+}
+@keyframes lightMove3 {
+  0%, 100% { transform: translate(-100px, 0) scale(1); }
+  50% { transform: translate(200px, 200px) scale(1.12); }
+}
+@keyframes glow {
+  0%, 100% { opacity: 0.4; filter: blur(32px); }
+  50% { opacity: 0.7; filter: blur(48px); }
+}
+
+.animate-lightMove1 { animation: lightMove1 12s ease-in-out infinite; }
+.animate-lightMove2 { animation: lightMove2 14s ease-in-out infinite; }
+.animate-lightMove3 { animation: lightMove3 16s ease-in-out infinite; }
+.animate-glow { animation: glow 3s ease-in-out infinite; }
+
+.grainy {
+  position: relative;
+}
+.grainy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+  background-image: url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity: 0.25;
+  mix-blend-mode: overlay;
+}
