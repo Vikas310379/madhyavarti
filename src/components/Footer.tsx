@@ -32,10 +32,10 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Section 1: Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-gradient-to-r from-primary-500 to-primary-700 p-2 rounded-lg">
-                <Smartphone className="h-6 w-6 text-white" />
-              </div>
+            <div className="flex items-center space-x-1">
+          <div className="p-2 rounded-lg">
+          <img src="/images/madhyavarti.png" alt="Custom icon" className="h-10 w-10 text-white" />
+          </div>
               <span className="text-xl font-bold">Madhyavarti</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
