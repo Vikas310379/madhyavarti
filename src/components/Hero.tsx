@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-6xl font-bold text-gray-100 text-center mb-6">
-          Transform Your Life with
+         Grow Smarter with
           <span className="block bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
             Madhyavarti
           </span>
@@ -30,8 +30,8 @@ const Hero: React.FC = () => {
 
         {/* Subtitle */}
         <p className="text-lg text-gray-300 text-center mb-8 max-w-xl">
-          Experience the future of mobile technology with our cutting-edge application. 
-          Designed for professionals who demand excellence and innovation in their daily workflow.
+          A unified platform for grocery and FMCG businesses, 
+          connecting millers, distributors, and wholesalers, with access to mandi reports, market prices, commodity insights, and direct procurement.
         </p>
 
         {/* Store Buttons with Glow */}

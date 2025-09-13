@@ -155,8 +155,7 @@ const ContactForm: React.FC = () => {
           <h3 className="text-lg font-semibold mb-1">Give us a Call</h3>
           <p className="text-gray-600 mb-2">Want to talk? We'd love to hear from you! Please call us on</p>
           <div className="font-medium text-gray-900">India: +91 9876543210</div>
-          <div className="font-medium text-gray-900">UK: +44 9876543210</div>
-        </div>
+          </div>
         <div>
           <div className="flex justify-center mb-2">
             <MailIcon className="text-green-600" size={32} />

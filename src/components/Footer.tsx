@@ -39,9 +39,10 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold">Madhyavarti</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              We're dedicated to creating innovative mobile solutions that empower professionals 
-              and businesses to achieve more. Our cutting-edge technology and user-centric design 
-              philosophy drive everything we do.
+              A unified platform for grocery and FMCG businesses, 
+              connecting millers, distributors, and wholesalers, 
+              with access to mandi reports, 
+              market prices, commodity insights, and direct procurement.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">

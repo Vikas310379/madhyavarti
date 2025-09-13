@@ -5,18 +5,18 @@ const ImageTextSection: React.FC = () => {
   const benefits = [
     {
       icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Optimized performance for seamless user experience'
+      title: 'Fast & Reliable',
+      description: 'Optimized for smooth trading and quick access to market insights.'
     },
     {
       icon: Shield,
-      title: 'Secure & Private',
-      description: 'Your data is protected with enterprise-grade security'
+      title: 'Secure & Trusted',
+      description: 'Enterprise-grade security to protect your business data and transactions.'
     },
     {
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Work together with your team in real-time'
+      title: 'Seamless Collaboration',
+      description: 'Engage with partners, suppliers, and buyers effortlessly.'
     }
   ];
 
@@ -103,12 +103,12 @@ const ImageTextSection: React.FC = () => {
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Built for Modern
-                <span className="text-primary-600"> Professionals</span>
+                <span className="text-primary-600"> Grocery Businesses</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Our application combines cutting-edge technology with intuitive design to deliver 
-                an unparalleled user experience. Whether you're managing projects, collaborating 
-                with teams, or tracking progress, we've got you covered.
+                Our platform connects millers, distributors, 
+                and wholesalers with retailers, offering real-time prices, 
+                mandi updates, and direct procurement—all in one place.
               </p>
             </div>
 
