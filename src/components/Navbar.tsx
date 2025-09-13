@@ -64,10 +64,10 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-primary-500 to-primary-700 p-2 rounded-lg">
-              <Smartphone className="h-6 w-6 text-white" />
-            </div>
+          <div className="flex items-center space-x-1">
+          <div className="p-2 rounded-lg">
+          <img src="/images/madhyavarti.png" alt="Custom icon" className="h-10 w-10 text-white" />
+          </div>
             <span
               className={`text-xl font-bold transition-colors ${
                 isScrolled ? 'text-gray-900' : 'text-white'
