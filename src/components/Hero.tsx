@@ -1,15 +1,23 @@
-import React from 'react';
-import { Star } from 'lucide-react';
+import React from "react";
+import { Star } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
-      {/* Animated Moving Lights */}
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-black overflow-hidden"
+    >
+      {/* Background Layers */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-1/6 top-1/6 w-[48rem] h-[48rem] bg-orange-700 rounded-full blur-3xl opacity-40 animate-lightMove1 grainy" />
-        <div className="absolute right-1/6 top-1/3 w-[48rem] h-[48rem] bg-blue-500 rounded-full blur-3xl opacity-30 animate-lightMove2 grainy" />
-        <div className="absolute left-1/2 bottom-1/4 w-72 h-72 bg-teal-400 rounded-full blur-3xl opacity-20 animate-lightMove3 grainy" />
-        
+        {/* Slow diagonal gradient sweeps */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-purple-900/20 animate-slowPan" />
+        <div className="absolute inset-0 bg-gradient-to-bl from-teal-900/20 via-transparent to-orange-900/20 animate-slowPan2" />
+
+        {/* Subtle moving spotlight */}
+        <div className="absolute w-[80rem] h-[80rem] rounded-full bg-white/5 blur-3xl animate-spotlight" />
+
+        {/* Mesh / grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
 
       {/* Content */}
@@ -22,26 +30,26 @@ const Hero: React.FC = () => {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-6xl font-bold text-gray-100 text-center mb-6">
-         Grow Smarter with
-          <span className="block bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+          Grow Smarter with
+          <span className="block bg-gradient-to-r from-blue-400 via-teal-400 to-purple-500 bg-clip-text text-transparent animate-gradient-x">
             Madhyavarti
           </span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg text-gray-300 text-center mb-8 max-w-xl">
-          A unified platform for grocery and FMCG businesses, 
-          connecting millers, distributors, and wholesalers, with access to mandi reports, market prices, commodity insights, and direct procurement.
+          A unified platform for grocery and FMCG businesses, connecting millers,
+          distributors, and wholesalers, with access to mandi reports, market
+          prices, commodity insights, and direct procurement.
         </p>
 
-        {/* Store Buttons with Glow */}
+        {/* Store Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <a
             href="https://play.google.com/store/apps/details?id=your.app.id"
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex items-center bg-white px-4 py-2 rounded-lg shadow hover:shadow-md transition-all group"
-            aria-label="Download on Google Play"
           >
             <span className="absolute -inset-1 rounded-lg bg-gradient-to-r from-purple-500 via-blue-500 to-teal-400 opacity-30 blur-xl group-hover:opacity-60 group-hover:blur-2xl transition-all duration-700 animate-glow"></span>
             <img
@@ -55,7 +63,6 @@ const Hero: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex items-center bg-white px-4 py-2 rounded-lg shadow hover:shadow-md transition-all group"
-            aria-label="Download on the App Store"
           >
             <span className="absolute -inset-1 rounded-lg bg-gradient-to-r from-purple-500 via-blue-500 to-teal-400 opacity-30 blur-xl group-hover:opacity-60 group-hover:blur-2xl transition-all duration-700 animate-glow"></span>
             <img
