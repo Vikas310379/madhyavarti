@@ -12,6 +12,7 @@ const HeroBackground = () => (
   </div>
 );
 
+
 interface FAQItem {
   question: string;
   answer: string | React.ReactNode;
@@ -194,21 +195,49 @@ const FAQPage: React.FC = () => {
       <Navbar />
 
       {/* Hero / Breadcrumb */}
-      <section className="relative w-full h-64 md:h-80 flex items-center justify-center bg-gray-900 overflow-hidden">
-        <HeroBackground />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a2236] via-[#42281a] to-[#1a2236] opacity-70"></div>
-        <div className="relative z-10 text-center w-full">
+   <section
+        className="relative w-full min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-black overflow-hidden"
+      >
+        {/* Background Layers */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Slow diagonal gradient sweeps */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-purple-900/20 animate-slowPan" />
+          <div className="absolute inset-0 bg-gradient-to-bl from-teal-900/20 via-transparent to-orange-900/20 animate-slowPan2" />
+
+          {/* Subtle moving spotlight */}
+          <div className="absolute w-[80rem] h-[80rem] rounded-full bg-white/5 blur-3xl animate-spotlight" />
+
+          {/* Mesh / grid pattern overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center px-4">
+          {/* Breadcrumb */}
           <nav className="mb-4 flex justify-center" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm text-white">
-              <li><a href="/" className="hover:underline">Home</a></li>
-              <li><span className="mx-2">/</span></li>
-              <li className="font-semibold text-blue-200">FAQ</li>
+              <li>
+                <a href="/" className="hover:underline">Home</a>
+              </li>
+              <li>
+                <span className="mx-2">/</span>
+              </li>
+              <li className="font-semibold text-blue-200">Contact</li>
             </ol>
           </nav>
-          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Frequently Asked Questions</h1>
-          <p className="text-gray-200 mt-2">Answers to the most common queries about our Madhyavarti grocery platform.</p>
+
+          {/* Page Title */}
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
+            Frequently Asked Questions
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-lg md:text-xl text-gray-300 mt-4 max-w-xl mx-auto">
+            Answers to the most common queries about our Madhyavarti grocery platform.
+          </p>
         </div>
       </section>
+
 
       {/* Main content layout with side menu */}
       <div className="max-w-7xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">

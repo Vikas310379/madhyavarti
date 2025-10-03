@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar'; // adjust path if needed
-import { ShoppingCart, Handshake, Package, TrendingUp, ShieldCheck, Users } from "lucide-react";
+import { ShoppingCart, Handshake, Package, TrendingUp, ShieldCheck, Users, Star } from "lucide-react";
 
-// Hero background styling from Hero.tsx
+// Hero background styling
 const HeroBackground = () => (
   <div className="absolute inset-0 pointer-events-none">
     <div className="absolute left-1/6 top-1/6 w-[48rem] h-[48rem] bg-orange-700 rounded-full blur-3xl opacity-40 animate-lightMove1 grainy" />
@@ -46,15 +46,27 @@ const coreValues = [
 
 function Overview() {
   return (
-    <div className="relative min-h-screen bg-gray-50">
-      {/* Navbar */}
-      <Navbar />
+    <div>
+      {/* Hero-style Header Section */}
+      <section
+        className="relative w-full min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-black overflow-hidden"
+      >
+        {/* Background Layers */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Slow diagonal gradient sweeps */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-purple-900/20 animate-slowPan" />
+          <div className="absolute inset-0 bg-gradient-to-bl from-teal-900/20 via-transparent to-orange-900/20 animate-slowPan2" />
 
-      {/* Hero Banner with background and breadcrumbs */}
-      <section className="relative w-full h-64 md:h-80 flex items-center justify-center bg-gray-900 overflow-hidden">
-        <HeroBackground />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a2236] via-[#42281a] to-[#1a2236] opacity-70"></div>
-        <div className="relative z-10 text-center w-full">
+          {/* Subtle moving spotlight */}
+          <div className="absolute w-[80rem] h-[80rem] rounded-full bg-white/5 blur-3xl animate-spotlight" />
+
+          {/* Mesh / grid pattern overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center px-4">
+          {/* Breadcrumb */}
           <nav className="mb-4 flex justify-center" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm text-white">
               <li>
@@ -63,10 +75,19 @@ function Overview() {
               <li>
                 <span className="mx-2">/</span>
               </li>
-              <li className="font-semibold text-blue-200">Overview</li>
+              <li className="font-semibold text-blue-200">Contact</li>
             </ol>
           </nav>
-          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Overview</h1>
+
+          {/* Page Title */}
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
+            Overview
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-lg md:text-xl text-gray-300 mt-4 max-w-xl mx-auto">
+             Our approach is grounded in a deep understanding of the B2B grocery ecosystem. We work closely with retailers, distributors, and suppliers to identify operational challenges and growth opportunities.
+          </p>
         </div>
       </section>
 
@@ -116,7 +137,7 @@ function Overview() {
           </div>
           <div className="md:w-1/2 p-8 flex flex-col justify-center">
             <h2 className="text-2xl font-bold text-blue-700 mb-4">Our Approach</h2>
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-700 mb-6 text-sm md:text-base leading-relaxed md:leading-loose">
               Our approach is grounded in a deep understanding of the B2B grocery ecosystem. We work closely with retailers, distributors, and suppliers to identify operational challenges and growth opportunities. Leveraging advanced technology, data-driven insights, and a robust logistics network, we deliver scalable solutions that streamline procurement, ensure supply reliability, and enhance efficiency. With a commitment to transparency, collaboration, and innovation, we empower businesses to build stronger supply chains and achieve sustainable growth.
             </p>
             <div className="flex gap-4">

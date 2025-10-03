@@ -101,7 +101,7 @@ const ImageTextSection: React.FC = () => {
               <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-4">
                 Why Choose Our App
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-10 leading-snug text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-500">
                 Built for Modern
                 <span className="text-primary-600"> Grocery Businesses</span>
               </h2>
