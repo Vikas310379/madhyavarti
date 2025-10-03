@@ -117,23 +117,27 @@ const BenefitsSection: React.FC = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="mt-20 bg-gradient-to-r from-primary-500 to-primary-700 rounded-3xl p-12 text-center">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Experience These Benefits?
-          </h3>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals who have already transformed their workflow. 
-            Start your free trial today and see the difference in just 24 hours.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
+     <div
+  className="mt-20 p-12 text-center rounded-3xl shadow-2xl"
+  style={{ background: 'linear-gradient(to right, #8EC5FC, #E0C3FC)' }} // Soft blue to light purple gradient (STAYS)
+>
+  <h3 className="text-4xl font-extrabold text-gray-800 mb-4"> {/* ⬅️ CHANGE: Switched to dark text */}
+    Ready to Experience These Benefits?
+  </h3>
+  <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed"> {/* ⬅️ CHANGE: Switched to slightly lighter dark text */}
+    Join thousands of retailers, distributors, and suppliers already streamlining their grocery business. Start using Madhyavarti today and see instant smarter decisions.
+  </p>
+  <div className="flex flex-col sm:flex-row gap-6 justify-center">
+    {/* PRIMARY BUTTON: Still stands out, now using a deep blue text for high contrast */}
+    <button className="bg-white text-blue-800 px-10 py-4 rounded-full font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 transform">
+      Start Free Trial
+    </button>
+    {/* SECONDARY BUTTON: Now uses a deep blue border and text, which is visible on the light background */}
+    <button className="border-2 border-blue-800 text-blue-800 px-10 py-4 rounded-full font-semibold hover:bg-white/50 transition-all duration-300">
+      Schedule Demo
+    </button>
+  </div>
+</div>
       </div>
     </section>
   );

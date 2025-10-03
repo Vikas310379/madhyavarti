@@ -27,7 +27,7 @@ const ImageTextSection: React.FC = () => {
           {/* Left Column - Image */}
           <div className="relative">
             {/* Main Image Container */}
-            <div className="relative bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl p-8 shadow-2xl">
+            <div className="relative rounded-3xl p-8 shadow-2xl" style={{ background: 'linear-gradient(to bottom right, #8EC5FC, #E0C3FC)' }}>
               {/* Phone Mockup */}
               <div className="bg-gray-900 rounded-[2.5rem] p-4 mx-auto w-64 shadow-xl">
                 <div className="bg-white rounded-[2rem] overflow-hidden">
