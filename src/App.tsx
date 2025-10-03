@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeatureTiles from './components/FeatureTiles';
 import StatsSection from './components/StatsSection';
+import Intro from './components/Intro';
 import ImageTextSection from './components/ImageTextSection';
 import BenefitsSection from './components/BenefitsSection';
 import ClientSlider from './components/ClientSlider';
@@ -11,6 +12,7 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import Contact from './contact';
 import Overview from './components/overview';
+import OurVision from './components/our-vision';
 import FAQ from './components/FAQ';
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -19,6 +21,7 @@ function Home() {
     <>
       <Hero />
       <StatsSection />
+      <Intro />
       <FeatureTiles />
       <ImageTextSection />
       <BenefitsSection />
@@ -37,6 +40,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/overview" element={<Overview />} />
+          <Route path="/our-vision" element={<OurVision />} />
           <Route path="/faq" element={<FAQ />} />
         </Routes>
         <Footer />

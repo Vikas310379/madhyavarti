@@ -1,21 +1,25 @@
 import React from 'react';
 
 const ClientSlider: React.FC = () => {
-  // Mock client logos - in real implementation, these would be actual logo images
   const clients = [
-    { name: 'TechCorp', logo: 'TC' },
-    { name: 'InnovateIO', logo: 'IO' },
-    { name: 'FutureWorks', logo: 'FW' },
-    { name: 'DataSync', logo: 'DS' },
-    { name: 'CloudBase', logo: 'CB' },
-    { name: 'NextGen', logo: 'NG' },
-    { name: 'SmartSoft', logo: 'SS' },
-    { name: 'ProTech', logo: 'PT' },
-    { name: 'DigitalFlow', logo: 'DF' },
-    { name: 'AppMaster', logo: 'AM' }
+    { name: 'Adani', logo: '/logos/Adani.jpg' },
+    { name: 'Ajanta', logo: '/logos/Ajanta.jpg' },
+    { name: 'Amul', logo: '/logos/Amul.jpg' },
+    { name: 'AWL', logo: '/logos/Awl.jpg' },
+    { name: 'Bikaji', logo: '/logos/Bikaji.jpg' },
+    { name: 'Bikano', logo: '/logos/Bikano.jpg' },
+    { name: 'Cargill', logo: '/logos/Cargill.jpg' },
+    { name: 'Catch', logo: '/logos/Catch.jpg' },
+    { name: 'Cremica', logo: '/logos/Cremica.jpg' },
+    { name: 'Daawat', logo: '/logos/Daawat.jpg' },
+    { name: 'Dabar', logo: '/logos/dabar.jpg' },
+    { name: 'Delmonte', logo: '/logos/Delmonte.jpg' },
+    { name: 'Dr. Oetker', logo: '/logos/Dr. Oetker.jpg' },
+    { name: 'Emami (Best choice)', logo: '/logos/Emami (Best choice).jpg' },
+    
+
   ];
 
-  // Duplicate the array for seamless loop
   const duplicatedClients = [...clients, ...clients];
 
   return (
@@ -46,15 +50,11 @@ const ClientSlider: React.FC = () => {
                 style={{ minWidth: '120px' }}
               >
                 <div className="bg-gray-50 rounded-xl p-6 h-20 flex items-center justify-center group-hover:bg-primary-50 group-hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md border border-gray-100">
-                  {/* Logo Placeholder */}
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg flex items-center justify-center text-white font-bold text-sm mb-1 group-hover:from-primary-500 group-hover:to-primary-700 transition-all duration-300">
-                      {client.logo}
-                    </div>
-                    <div className="text-xs text-gray-500 font-medium">
-                      {client.name}
-                    </div>
-                  </div>
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="max-h-12 object-contain"
+                  />
                 </div>
               </div>
             ))}

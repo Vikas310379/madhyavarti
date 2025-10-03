@@ -1,19 +1,19 @@
 import React from 'react';
-import { TrendingUp, Clock, Target, Globe } from 'lucide-react';
+import { TrendingUp, Clock, Target, Globe, Handshake, Square, SquareCheckBig, Waypoints } from 'lucide-react';
 
 const BenefitsSection: React.FC = () => {
   const leftBenefits = [
     {
       icon: TrendingUp,
-      title: 'Boost Productivity',
-      description: 'Increase your efficiency by 300% with our smart automation tools and intuitive workflows that eliminate repetitive tasks.',
+      title: 'All Nearby Mandi Updates in One Place',
+      description: 'Stay informed with real-time mandi price updates and market trends, all consolidated in a single platform. Our app ensures you never miss critical price changes, helping you make smarter buying and selling decisions.',
       color: 'text-green-600',
       bgColor: 'bg-green-100'
     },
     {
-      icon: Clock,
-      title: 'Save Time Daily',
-      description: 'Reduce manual work by up to 5 hours per day. Our AI-powered features handle the heavy lifting so you can focus on what matters most.',
+      icon: Handshake,
+      title: 'Direct Connections with Verified Partners',
+      description: 'We connect you directly with trusted distributors, dealers, suppliers, and wholesalers. This eliminates unnecessary middlemen, reduces costs, and builds long-term business relationships.',
       color: 'text-blue-600',
       bgColor: 'bg-blue-100'
     }
@@ -21,16 +21,16 @@ const BenefitsSection: React.FC = () => {
 
   const rightBenefits = [
     {
-      icon: Target,
-      title: 'Achieve Goals Faster',
-      description: 'Set, track, and accomplish your objectives with precision. Our goal-tracking system ensures you never lose sight of what\'s important.',
+      icon: SquareCheckBig,
+      title: 'Transparent Deals at Mandi Prices',
+      description: 'With Madhyavarti, you can access the same prices available in local mandis — right from your mobile. No hidden charges, no inflated costs, just fair pricing and reliable transactions at your fingertips.',
       color: 'text-purple-600',
       bgColor: 'bg-purple-100'
     },
     {
-      icon: Globe,
-      title: 'Global Collaboration',
-      description: 'Connect and collaborate with team members worldwide. Real-time sync and multi-language support keep everyone on the same page.',
+      icon: Waypoints,
+      title: 'End-to-End Logistics & Backend Support',
+      description: 'When you make a deal through Madhyavarti, we go beyond pricing by providing logistics, delivery, and backend support. Our goal is to make your transactions seamless and hassle-free from start to finish.',
       color: 'text-orange-600',
       bgColor: 'bg-orange-100'
     }
@@ -79,8 +79,7 @@ const BenefitsSection: React.FC = () => {
             <span className="text-primary-600"> Transform Your Business</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our innovative features and intelligent design choices create 
-            measurable improvements in your daily productivity and success.
+            Stay updated with mandi prices, make smart deals, and manage everything easily through one powerful app.
           </p>
         </div>
 

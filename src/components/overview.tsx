@@ -66,7 +66,7 @@ function Overview() {
               <li className="font-semibold text-blue-200">Overview</li>
             </ol>
           </nav>
-          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Company Overview</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Overview</h1>
         </div>
       </section>
 
