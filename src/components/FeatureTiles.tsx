@@ -14,7 +14,7 @@ const FeatureTiles: React.FC = () => {
     {
       icon: UserPlus,
       title: 'Register in App',
-      description: 'Create your account in seconds. Secure registration with email or social login options.',
+      description: 'Sign in using your mobile number. Then enter your details to personalize your experience.',
       gradient: 'from-green-500 to-green-700',
       hoverGradient: 'hover:from-green-600 hover:to-green-800',
       cta: 'Sign Up Today'
@@ -22,7 +22,7 @@ const FeatureTiles: React.FC = () => {
     {
       icon: Compass,
       title: 'Explore All Features',
-      description: 'Discover powerful tools and features designed to enhance your productivity and experience.',
+      description: 'Discover powerful tools designed to simplify your grocery and FMCG operations.',
       gradient: 'from-purple-500 to-purple-700',
       hoverGradient: 'hover:from-purple-600 hover:to-purple-800',
       cta: 'Explore Features'

@@ -9,8 +9,8 @@ const Intro: React.FC = () => {
       <div className="absolute top-1/3 left-0 w-[300px] h-[300px] bg-pink-200 rounded-full opacity-15 blur-3xl pointer-events-none"></div>
 
       <div className="relative w-full">
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-10 leading-snug text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-500">
-          Madhyavarti-A Unified Platform for Grocery and FMCG Businesses
+        <h2 className="text-3xl md:text-3xl font-extrabold mb-10 leading-snug text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-500">
+          Madhyavarti The Broker-A Unified Platform for Grocery and FMCG Businesses
         </h2>
 
         <p className="text-gray-700 mb-6 text-sm md:text-base leading-relaxed md:leading-loose">
@@ -24,7 +24,7 @@ const Intro: React.FC = () => {
         <p className="text-gray-700 mb-6 text-sm md:text-base leading-relaxed md:leading-loose">
           Our platform connects all stakeholders in the grocery and FMCG sector, creating a seamless 
           ecosystem where trade becomes easier, faster, and more efficient. By bringing millers, 
-          distributors, and wholesalers together, we eliminate unnecessary middle layers, reduce costs, 
+          distributors, and wholesalers together, we eliminate unnecessary intermediaries, reduce costs, 
           and enable smarter business decisions backed by reliable data.
         </p>
 

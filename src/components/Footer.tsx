@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
     { name: 'Twitter', icon: Twitter, href: '#twitter' },
     { name: 'Instagram', icon: Instagram, href: '#instagram' },
     { name: 'LinkedIn', icon: Linkedin, href: '#linkedin' },
-    { name: 'YouTube', icon: Youtube, href: '#youtube' }
+    { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@madhyavartithebroker_08' }
   ];
 
   return (
@@ -51,11 +51,11 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="h-5 w-5 text-primary-400" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 9211301229</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="h-5 w-5 text-primary-400" />
-                <span>Gurgaon- 122004, Haryana</span>
+                <span>Gurgaon - 122004, Haryana</span>
               </div>
             </div>
           </div>

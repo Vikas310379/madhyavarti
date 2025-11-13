@@ -42,7 +42,7 @@ const faqCategories: { title: string; icon: React.ReactNode; items: FAQItem[] }[
       },
       {
         question: 'How do mandi reports help my business?',
-        answer: 'Mandi reports provide daily updates on prices, demand, and supply trends across different markets. This helps you plan purchases, control costs, and negotiate effectively.'
+        answer: 'Mandi reports provide daily updates on prices, demand, and supply trends across different markets. This helps you to plan purchases, control costs, and negotiate effectively.'
       },
       {
         question: 'How do I stay updated with commodity and mandi news?',
@@ -108,6 +108,7 @@ const faqCategories: { title: string; icon: React.ReactNode; items: FAQItem[] }[
             <li>Packaged foods, snacks, beverages</li>
             <li>Edible oils, sugar, salt, and condiments</li>
             <li>Cleaning and household essentials</li>
+            <li>And many more items</li>
           </ul>
         )
       },

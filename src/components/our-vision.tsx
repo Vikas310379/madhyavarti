@@ -67,7 +67,7 @@ const OurVision: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-blue-700 mb-6">Our Vision</h2>
             <p className="text-gray-700 mb-6 text-sm md:text-base leading-relaxed md:leading-loose">
               At <strong>Madhyavarti</strong>, our vision is to create a transparent and inclusive
-              marketplace that connects small, medium, and large vendors with the opportunities they deserve.
+              marketplace that connects small, medium, and large businesses with the opportunities they deserve.
               We are building a free, easy-to-use mobile app that empowers vendors to access
               <strong> real-time market prices, industry trends, and wholesale deals</strong> — all in one place.
             </p>
@@ -75,10 +75,10 @@ const OurVision: React.FC = () => {
               By providing updated price information and direct connections to various wholesale markets,
               we give vendors the independence to make informed decisions, negotiate smarter, and grow their
               businesses without limitations. Our platform also enables them to <strong>buy directly from us </strong>
-              at their convenience, while keeping costs low with only a nominal service fee.
+              at their convenience, while keeping costs low with only a nominal Brokrage fee.
             </p>
             <p className="text-gray-700 mb-6 text-sm md:text-base leading-relaxed md:leading-loose">
-              We strive to be the trusted bridge between vendors and the market, helping them unlock new
+              We strive to be the trusted bridge between suppliers and the market, helping them unlock new
               opportunities, stay competitive, and achieve long-term growth in an ever-changing business landscape.
             </p>
           </div>

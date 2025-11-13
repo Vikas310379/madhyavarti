@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-full text-gray-100 text-sm font-medium mb-8">
           <Star className="h-4 w-4 mr-2 text-yellow-400" />
-          #1 Rated Mobile App
+          Fastest Growing B2B Grocery & FMCG App
         </div>
 
         {/* Main Headline */}
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
         {/* Store Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <a
-            href="https://play.google.com/store/apps/details?id=your.app.id"
+            href="https://play.google.com/store/apps/details?id=com.madhyavarti.the.trader"
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex items-center bg-white px-4 py-2 rounded-lg shadow hover:shadow-md transition-all group"

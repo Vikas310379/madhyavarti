@@ -14,7 +14,7 @@ const HeroBackground = () => (
 const coreValues = [
   {
     title: "Customer First, Always",
-    desc: "Our retailers are at the heart of everything we do. We listen, adapt, and deliver groceries that meet your needs seamlessly.",
+    desc: "Our customers are at the heart of everything we do. We listen, adapt, and deliver products that meet your business needs seamlessly.",
     icon: ShoppingCart
   },
   {
@@ -29,7 +29,7 @@ const coreValues = [
   },
   {
     title: "Think Beyond the Basket",
-    desc: "We don’t just deliver groceries — we innovate to provide smarter solutions that help your business grow.",
+    desc: "We don’t just deliver products — we innovate to provide smarter solutions that help your business grow.",
     icon: TrendingUp
   },
   {
@@ -96,7 +96,7 @@ function Overview() {
         <div className="mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-blue-700 mb-2">Core Values</h2>
           <p className="text-gray-700 mb-6">
-            We break down barriers so teams can focus on what matters – working together to create products their customers love.
+            We break down barriers so teams can focus on what matters – providing trusted products their customers value.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <ul className="space-y-6">
@@ -138,7 +138,7 @@ function Overview() {
           <div className="md:w-1/2 p-8 flex flex-col justify-center">
             <h2 className="text-2xl font-bold text-blue-700 mb-4">Our Approach</h2>
             <p className="text-gray-700 mb-6 text-sm md:text-base leading-relaxed md:leading-loose">
-              Our approach is grounded in a deep understanding of the B2B grocery ecosystem. We work closely with retailers, distributors, and suppliers to identify operational challenges and growth opportunities. Leveraging advanced technology, data-driven insights, and a robust logistics network, we deliver scalable solutions that streamline procurement, ensure supply reliability, and enhance efficiency. With a commitment to transparency, collaboration, and innovation, we empower businesses to build stronger supply chains and achieve sustainable growth.
+              Our approach is grounded in a deep understanding of the B2B FMCG ecosystem. We work closely with retailers, distributors, and suppliers to identify operational challenges and growth opportunities. Leveraging advanced technology, data-driven insights, and a robust logistics network, we deliver scalable solutions that streamline procurement, ensure supply reliability, and enhance efficiency. With a commitment to transparency, collaboration, and innovation, we empower businesses to build stronger supply chains and achieve sustainable growth.
             </p>
             <div className="flex gap-4">
               <a

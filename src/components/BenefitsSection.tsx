@@ -13,7 +13,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: Handshake,
       title: 'Direct Connections with Verified Partners',
-      description: 'We connect you directly with trusted distributors, dealers, suppliers, and wholesalers. This eliminates unnecessary middlemen, reduces costs, and builds long-term business relationships.',
+      description: 'We connect you directly with trusted distributors, dealers, millers, suppliers, and wholesalers. This eliminates unnecessary middlemen, reduces costs, and builds long-term business relationships.',
       color: 'text-blue-600',
       bgColor: 'bg-blue-100'
     }
@@ -118,16 +118,16 @@ const BenefitsSection: React.FC = () => {
 
         {/* Bottom CTA Section */}
      <div
-  className="mt-20 p-12 text-center rounded-3xl shadow-2xl"
-  style={{ background: 'linear-gradient(to right, #8EC5FC, #E0C3FC)' }} // Soft blue to light purple gradient (STAYS)
->
-  <h3 className="text-4xl font-extrabold text-gray-800 mb-4"> {/* ⬅️ CHANGE: Switched to dark text */}
-    Ready to Experience These Benefits?
-  </h3>
-  <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed"> {/* ⬅️ CHANGE: Switched to slightly lighter dark text */}
-    Join thousands of retailers, distributors, and suppliers already streamlining their grocery business. Start using Madhyavarti today and see instant smarter decisions.
-  </p>
-  <div className="flex flex-col sm:flex-row gap-6 justify-center">
+        className="mt-20 p-12 text-center rounded-3xl shadow-2xl"
+        style={{ background: 'linear-gradient(to right, #8EC5FC, #E0C3FC)' }} // Soft blue to light purple gradient (STAYS)
+          >
+        <h3 className="text-4xl font-extrabold text-gray-800 mb-4"> {/* ⬅️ CHANGE: Switched to dark text */}
+        Ready to Experience These Benefits?
+        </h3>
+        <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed"> {/* ⬅️ CHANGE: Switched to slightly lighter dark text */}
+      Join thousands of retailers, distributors, and suppliers already streamlining their grocery business. Start using Madhyavarti today and see instant smarter decisions.
+        </p>
+      <div className="flex flex-col sm:flex-row gap-6 justify-center">
     {/* PRIMARY BUTTON: Still stands out, now using a deep blue text for high contrast */}
     <button className="bg-white text-blue-800 px-10 py-4 rounded-full font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 transform">
       Start Free Trial

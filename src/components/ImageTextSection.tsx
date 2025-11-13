@@ -103,11 +103,10 @@ const ImageTextSection: React.FC = () => {
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold mb-10 leading-snug text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-500">
                 Built for Modern
-                <span className="text-primary-600"> Grocery Businesses</span>
+                <span className="text-primary-600"> Grocery & FMCG Businesses</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Our platform connects millers, distributors, 
-                and wholesalers with retailers, offering real-time prices, 
+                Our platform connects millers, manufacturers, distributors, and wholesalers with retailers and HoReCa businesses, offering real-time prices, 
                 mandi updates, and direct procurement—all in one place.
               </p>
             </div>

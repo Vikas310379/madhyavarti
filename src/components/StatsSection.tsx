@@ -25,7 +25,7 @@ const StatsSection: React.FC = () => {
         </svg>
       ),
       number: '100K+',
-      label: 'Buyers and Sellers'
+      label: 'Buyers'
     },
     {
       icon: (
@@ -44,7 +44,7 @@ const StatsSection: React.FC = () => {
         </svg>
       ),
       number: '500+',
-      label: 'No. of brands'
+      label: 'Trusted brands'
     },
     {
       icon: (
@@ -63,7 +63,7 @@ const StatsSection: React.FC = () => {
         </svg>
       ),
       number: '100K+',
-      label: 'No. of products'
+      label: 'Listed products'
     }
   ];
 

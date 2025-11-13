@@ -30,9 +30,7 @@ const ClientSlider: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
             Trusted by Industry Leaders
           </h2>
-          <p className="text-lg text-gray-600">
-            Join thousands of companies that rely on our platform for their success
-          </p>
+          
         </div>
 
         {/* Logo Slider */}
@@ -53,7 +51,7 @@ const ClientSlider: React.FC = () => {
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="max-h-12 object-contain"
+                    className="max-h-16 object-contain"
                   />
                 </div>
               </div>
